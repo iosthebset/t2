@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-votercontrol',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VoterControlComponent implements OnInit {
 
+  @Output() onVote = new EventEmitter<boolean>();
+
   constructor() { }
 
   ngOnInit() {
@@ -14,9 +16,9 @@ export class VoterControlComponent implements OnInit {
 
   onGetVote(vote: boolean) {
     if (vote) {
-      console.log("+1");
+      this.onVote.emit(true)
     } else {
-      console.log("-1");
+      this.onVote.emit(false)
     }
   }
 }

@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VoterComponent implements OnInit {
 
+  up: number = 0;
+  down: number = 0;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  getResult(vote: boolean) {
+    if (vote) {
+      this.up +=1;
+    } else {
+      this.down +=1;
+    }
   }
 
 }

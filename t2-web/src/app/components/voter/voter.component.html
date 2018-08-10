@@ -1,4 +1,4 @@
 <div class="container">
-  <app-voterresult></app-voterresult>
-  <app-votercontrol></app-votercontrol>
+  <app-voterresult [upVote]="up" [downVote]="down"></app-voterresult>
+  <app-votercontrol (onVote)="getResult($event)"></app-votercontrol>
 </div>
