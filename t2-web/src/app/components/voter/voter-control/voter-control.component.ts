@@ -16,9 +16,9 @@ export class VoterControlComponent implements OnInit {
 
   onGetVote(vote: boolean) {
     if (vote) {
-      this.onVote.emit(true)
+      this.onVote.emit(true);
     } else {
-      this.onVote.emit(false)
+      this.onVote.emit(false);
     }
   }
 }

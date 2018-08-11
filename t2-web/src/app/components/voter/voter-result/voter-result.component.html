@@ -1,3 +1,7 @@
-<p>Up vote: {{ upVote }}</p>
-<p>Down vote: {{ downVote }}</p>
-<p>Result: {{ result }}</p>
+<div class="row">
+  <div class="col-md-3">
+    <p [appPColor]="'#5cb85c'">Up vote: {{ upVote }}</p>
+    <p [appPColor]="'#d9534f'">Down vote: {{ downVote }}</p>
+    <p [appPColor]="result < 0 ? '#d9534f' : '#5cb85c'">Result: {{ result }}</p>
+  </div>
+</div>
